@@ -1,11 +1,22 @@
+/**
+ * countdown: Increments input parameter to zero and prints it to the console.
+ * @param  {Number} seconds The number to start your countdown at.
+ */
 function countdown(seconds){
 	
-	for(seconds; seconds >= 0; seconds--){
-		var printTime = function(time){
-			console.log(time);
-		};
-		setTimeout(printTime(seconds), 1000);
-	}
+	function printTime(){
+		if(seconds >= 0){
+			//if seconds has not ended print
+			console.log(seconds);
+			seconds--;
+		} else{
+			//otherwise clear interval
+			clearInterval();
+		}
+	};
+
+	//Execute printTime every second
+	setInterval(printTime, 1000);
 };
 
 countdown(10);

@@ -1,14 +1,13 @@
 
 function countdown(seconds){
-  document.write(seconds);
-  setInterval(function(){
-  		seconds = seconds-1;
-  		document.write(seconds + '<br>');
-	}, 1000);
-  setTimeout(function(){
-  	clearInteval()
-  	document.write(done);
-  }, seconds.getMilliseconds())
+	if(seconds > 0){
+		document.write(seconds + '<br>');	
+		seconds--;
+		setTimeout(function(){
+			countdown(seconds)
+		}, 1000);
+	}
 }
 
-countdown(10);
+
+countdown(60);

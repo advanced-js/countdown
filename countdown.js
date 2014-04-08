@@ -9,5 +9,4 @@ function countdown(seconds){
 	}
 }
 
-
-countdown(60);
+countdown(10);

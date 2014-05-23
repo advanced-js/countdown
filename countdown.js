@@ -1,8 +1,15 @@
 function countdown(seconds){
-	while (seconds >= 0){
+		
+	if (seconds >= 0){
+		
 		console.log(seconds);
 		seconds--;
-	}
-}
+		
+		setTimeout(function(){
+			countdown(seconds)
+		}, 1000);
+		
+	};
+};
 
 countdown(10);

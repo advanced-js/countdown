@@ -14,6 +14,7 @@ function countdown(seconds){
 ///////////////////////LEVEL 2
 
 
+/*
 function countdown(seconds){
   var secs = parseInt(seconds);
   var clearIntervalID = setInterval(function() {
@@ -21,14 +22,16 @@ function countdown(seconds){
 	if (secs<0) {clearInterval(clearIntervalID);}
   }, 1000);
 }
-
+*/
 
 ///////////////////////LEVEL 3
 
-/*function countdown(seconds){
-	i give up 
-	:P
-}*/
+function countdown(seconds){
+  if (seconds >= 0) {
+    console.log(seconds);
+    setTimeout( function() {countdown(--seconds);}, 1000 );
+  }
+}
 
 
 

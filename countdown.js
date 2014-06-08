@@ -1,25 +1,16 @@
-//Level 1: Uses global variable to keep track of time
+//Level 2 and 3: Keeps track of time without defining any new variables
 
-//Sets IntervalID
-var intervID = setInterval(countdown, 1000);
+function countDown(seconds) 
+{
+    //Putting the console log statement here allows to view the last second (0) as well
+    console.log(seconds);
 
-//Declares and initializes Count variable
-var count = 0;
-
-//Declares and initializes seconds to countdown
-var seconds = 5;
-
-function countdown() {
-    // Prints the second countdown for as long as the count <= 5
-    if (count <= 5) 
+    if (seconds > 0) 
     {
-        console.log(seconds--);
+        //This is a recursive function that calls count down for as long as 'seconds' is greater than 0 
+        setTimeout(function () { countDown(--seconds) }, 1000);
     }
-    else //Stops and clears the interval
-    {
-        clearInterval(intervID);
-    }
-
-    //Increments count
-    count++;
 }
+
+//First call 
+countDown(5);

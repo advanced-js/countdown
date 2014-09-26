@@ -1,10 +1,9 @@
 /* ==== LEVEL 1 ==== */
 //Use global variable to keep track of time
 
-/*
 var seconds = 10;
 
-function countdown( seconds ) {
+function countdown() {
 
     if ( seconds >= 0 ) {
 
@@ -14,19 +13,18 @@ function countdown( seconds ) {
 
             seconds --;
 
-            countdown(seconds);
+            countdown();
 
         }, 1000);
     }
 
 }
 
-countdown(seconds);
-*/
+countdown();
 
 /* ==== LEVEL 2 ==== */
 //Keep track of time without defining any global variables
-
+/*
 function countdown( seconds ) {
 
     if ( seconds >= 0 ) {
@@ -43,3 +41,4 @@ function countdown( seconds ) {
 }
 
 countdown(10);
+*/

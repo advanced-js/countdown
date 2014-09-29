@@ -27,7 +27,7 @@ countdown( 10 );
 /* ==== LEVEL 2 ==== */
 //Keep track of time without defining any global variables
 
-
+/*
 function countdown( seconds ) {
 
     var countdown_timer = setInterval(function() {
@@ -45,12 +45,12 @@ function countdown( seconds ) {
 }
 
 countdown( 10 );
-
+*/
 
 /* ==== LEVEL 3 ==== */
 //BONUS: don't define any new variables
 
-/*
+
 function countdown( seconds ) {
 
     if ( seconds >= 0 ) {
@@ -67,4 +67,3 @@ function countdown( seconds ) {
 }
 
 countdown(10);
-*/

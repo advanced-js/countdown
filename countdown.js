@@ -1,11 +1,12 @@
-function countdown(seconds) {
+function countdown(seconds) {	
+	var count = function(seconds, delay) {
+		setTimeout(function() {
+			console.log(seconds);
+		}, delay);
+	};
+
 	for(var delay = 1000; seconds>=0; seconds--, delay+=1000){
-		var count = function(seconds) {
-			setTimeout(function() {
-				console.log(seconds);
-			}, delay);
-		}
-		count(seconds);
+		count(seconds, delay);
 	}
 }
 
@@ -22,7 +23,7 @@ function countdownRecursive(seconds) {
 				count(seconds);
 			}
 		}, 1000);
-	}
+	};
 
 	count(seconds);
 }

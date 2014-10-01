@@ -1,3 +1,19 @@
+//1
+
+//2
+function countdown (seconds) {
+  var timer = setInterval(function() {
+    console.log(seconds);
+    if (seconds) {
+      seconds--;
+    } else {
+      clearInterval(timer);
+      }
+    },1000);
+  }
+countdown(5);
+
+//3
 function countdown(seconds){
   if (seconds>=0){
     console.log(seconds);
@@ -8,3 +24,5 @@ function countdown(seconds){
   };
 };
 countdown(5);
+
+

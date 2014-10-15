@@ -1,7 +1,7 @@
 // JavaScript Document
 
 
-/*2 forms of the original which do not countdown per second */
+/*2 forms of the original which do not countdown per second 
 
 function countdown(seconds){
 	for (i=seconds; i>=0; i--){
@@ -26,7 +26,7 @@ function countdown(seconds){
 	}
 }
 
-
+*/
 
 /*V2, added a function around countdown seconds, returning 1 undefined?*/
 

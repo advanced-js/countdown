@@ -1,5 +1,8 @@
-function countdown(seconds){
-  // ...
-}
 
-countdown(5);
+onload = function() {
+  function countdown(seconds) {
+    // ...
+  }
+
+  countdown(5);
+}

@@ -1,3 +1,5 @@
+// only works on chrome
+
 var t = -1;
 
 function countdown(seconds){

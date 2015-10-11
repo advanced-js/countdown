@@ -3,12 +3,12 @@ function countdown(seconds){
 	var timer = 
 	setInterval(function(){
 		console.log(seconds);
-		seconds--
+		seconds--;
 		if (seconds === -1) {
 			console.log("Countdown exercise complete!!");
 			clearInterval(timer);
 		}
-	},1000)
+	},1000);
 	//end var timer
 
 } //end function countdown(seconds)

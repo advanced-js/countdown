@@ -1,11 +1,8 @@
 function countdown(seconds){
-    var countdownBySeconds = setInterval(function() { 
+    setTimeout(function() { 
         if(seconds >= 0) { 
             console.log(seconds); 
-            seconds--; 
-
-        } else { 
-            clearInterval(countdownBySeconds); 
+            countdown(--seconds); 
         }
 
     }, 1000);

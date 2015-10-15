@@ -7,6 +7,8 @@ function countdown(seconds){
         	console.log(seconds);
         }
     }, 1000);
+
+    return seconds;
 }
 
 console.log(countdown(5));

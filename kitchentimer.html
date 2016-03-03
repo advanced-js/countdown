@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kitchen timer</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+
+	<style>
+	
+	*{
+		font-family: "Lato"; 
+		font-weight: 100; 
+		text-align: center;
+	}
+
+	.container {
+		width: 350px; 
+		height: 200px; 
+		background-color: #34495e;  
+	}
+	.time {
+		width: 90%;
+		height: 110px; 
+		background-color: white;
+		position: relative;  
+		display: block;
+		margin-left: auto; 
+		margin-right: auto; 
+		top:10px;
+	}
+
+	.time ul{
+		position: relative;
+		padding:0px;
+		width: 100%; 
+		list-style: none;
+		top:10px;
+	}
+	.time li{
+		display: inline-block;
+	}
+	.time span {
+		width: 100%; 
+		position: relative;
+		font-weight: 100; 
+		font-size: 4em; 
+		display: inline-block;
+	}
+	.start{
+		width: 120px; 
+		height: 50px;
+		background-color: #27ae60; 
+		position: absolute;
+		display: block;
+		top: 150px;
+		margin-left: 18px;
+		cursor: pointer;
+
+	}
+
+	.start:hover{
+		background-color: #2ecc71; 
+	}
+	.start span{
+		width: 100%; 
+		font-size: 1.5em;
+		color: white; 
+		text-align: center;
+		position: relative;
+		top:5px;	
+	}
+	.reset{
+		width: 120px; 
+		height: 50px;
+		background-color: #c0392b; 
+		position: absolute;
+		top: 150px;
+		left: 200px;
+		margin-left: 20px;
+		cursor: pointer;
+
+	}
+	.reset:hover{
+		background-color: #e74c3c;
+	}
+	.reset span{
+		width: 100%; 
+		font-size: 1.5em;
+		color: white; 
+		text-align: center; 
+		position: relative;
+		top:5px;
+	}
+	.colon{
+		top: -5px;
+	}
+	</style>
+
+</head>
+
+<body>
+
+<div class = "container">
+	<div class = "time">
+		<ul>
+			<li><span class= "secs">00:00:00</span></li>
+		</ul>
+	</div>
+		<div class = "start"><span>start</span></div>
+		<div class = "reset"><span>reset</span></div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+
+	var time = 0; 
+	var running = 0; 
+
+	$(document).ready(function() {
+		$(".start").click(function() {
+			if (running == 0){
+				running = 1; 
+				increment(); 
+				$(".start span").text("pause"); 
+			} else { 
+				running = 0; 
+				$(".start span").text("resume"); 
+			}	
+
+		$(".reset").click(function(){
+			running = 0;
+			time = 0;  
+			$(".start span").text("start"); 
+			$(".secs").text("00:00:00"); 
+
+		});		
+		});
+	}); 
+
+	function increment() { 	
+		if (running == 1){
+			setTimeout(function(){
+				time++ ; 
+				var mins = Math.floor(time/10/60);
+				var secs = Math.floor(time/10 % 60);
+				var tenths = time % 10; 
+
+				if  (mins < 10 ){
+					mins = "0" + mins; 
+				}
+
+				if  (secs < 10 ){
+					secs = "0" + secs; 
+				}
+
+				$(".secs").text( mins + ":" + secs + ":" + "0" + tenths)
+				increment(); 
+			}, 100);	
+		}
+	}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

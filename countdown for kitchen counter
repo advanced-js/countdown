@@ -1,0 +1,12 @@
+function countdown(){
+			
+	console.log(seconds);
+	seconds--;
+	if (seconds<0){
+		console.log("Times up!");
+		clearInterval(interval);
+	}
+}
+
+var seconds=10;
+var interval=setInterval(countdown,1000);

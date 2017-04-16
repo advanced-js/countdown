@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Homework 1</title>
+</head>
+<body>
+
+<script>
+function countdown(seconds){
+	for (count=seconds; count>=0; count--){
+		 (function (count) {
+            setTimeout(function () {
+               document.write(count+"<br>")
+               }, 1000);
+         })(count);
+			
+	}
+}
+
+countdown(5);
+
+/*does not seem to be displaying numbers per second?*/
+
+</script>
+</body>
+</html>
+
+
